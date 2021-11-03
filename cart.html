@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>My cart</title>
@@ -118,65 +120,74 @@
         </div>
     </header>
     <main>
-        <section class="breadcrumb-wrp">
-            <div class="breadcrumb-container container">
-                <span class="breadcrumb-title">Shopping cart</span>
+        <section class="page-heading-wrp">
+            <div class="page-heading-container container">
+                <span class="page-heading-title">Shopping cart</span>
             </div>
         </section>
         <section class="cart container">
-            <div class="list-item-product-wrp">
-                <div class="list-item-product">
-                    <img src="img/photo-3.jpg" alt="photo-3">
-                    <div class="list-item-product-info">
-                        <h3 class="list-item-product-title">Mango people t-shirt</h3>
-                        <ul>
-                            <li class="list-item-product-txt">Price:<span class="price-txt">$300</span>
-                            </li>
-                            <li class="list-item-product-txt">Color:<span class="color-txt">Red</span></li>
-                            <li class="list-item-product-txt">Size:<span class="size-txt">xl</span></li>
-                            <li class="list-item-product-txt">Quantity:<span class="quantity-txt">2</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="list-item-product">
-                    <img src="img/photo-7.jpg" alt="photo-7">
-                    <div class="list-item-product-info">
-                        <h3 class="list-item-product-title">Mango people t-shirt</h3>
-                        <ul>
-                            <li class="list-item-product-txt">Price:<span class="price-txt">$300</span>
-                            </li>
-                            <li class="list-item-product-txt">Color:<span class="color-txt">Red</span></li>
-                            <li class="list-item-product-txt">Size:<span class="size-txt">xl</span></li>
-                            <li class="list-item-product-txt ">Quantity:<span class="quantity-txt">2</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="go-cart-btn-wrp">
-                    <a href="#">
-                        <p class="go-cart-btn">CLEAR SHOPPING CART</p>
-                    </a>
-                    <a href="#">
-                        <p class="go-cart-btn">CONTINUE SHOPPING</p>
-                    </a>
-                </div>
-            </div>
+            <form>
+                <div class="list-item-product-wrp">
+                    <div class="list-item-product">
+                        <img class="list-item-product-photo" src="img/photo-3.jpg" alt="photo-3">
+                        <div class="list-item-product-info">
+                            <h3 class="list-item-product-title">Mango people t-shirt<label class="menu-list-close-btn delete-from-cart-btn"></label></h3>
+                            <form>
+                                <ul>
+                                    <li class="list-item-product-txt">Price:<span class="price-txt">$300</span>
+                                    </li>
+                                    <li class="list-item-product-txt">Color:<span class="color-txt">Red</span></li>
+                                    <li class="list-item-product-txt">Size:<span class="size-txt">xl</span></li>
 
-            <div class="shipping-form">
-                <form>
+                                    <li class="list-item-product-txt ">Quantity:<input class="quantity-txt" type="number" name="quantity" aria-placeholder="1"></li>
+
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="list-item-product">
+                        <img class="list-item-product-photo" src="img/photo-7.jpg" alt="photo-7">
+                        <div class="list-item-product-info">
+                            <h3 class="list-item-product-title">Mango people t-shirt<label class="menu-list-close-btn delete-from-cart-btn"></label></h3>
+                            <form>
+                                <ul>
+                                    <li class="list-item-product-txt">Price:<span class="price-txt">$300</span>
+                                    </li>
+                                    <li class="list-item-product-txt">Color:<span class="color-txt">Red</span></li>
+                                    <li class="list-item-product-txt">Size:<span class="size-txt">xl</span></li>
+
+                                    <li class="list-item-product-txt ">Quantity:<input class="quantity-txt" type="number" name="quantity" aria-placeholder="1"></li>
+
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="go-cart-btn-wrp">
+                        <button class="go-cart-btn">
+                        <span>clear shopping cart</span>
+                    </button>
+                        <button class="go-cart-btn">
+                        <span>continue shopping</span>
+                    </button>
+                    </div>
+                </div>
+                <div class="shipping-form">
+
                     <div class="heading-input">
                         <h4 class="shipping-form-title">Shipping address</h4>
+                        <div class="registration-input"><input class="input" type="text" placeholder="Bangladesh"></div>
+                        <div class="registration-input"> <input class="input" type="text" placeholder="State"></div>
+                        <div class="registration-input post-code-input"><input class="input" type="text" placeholder="Post code / Zip"></div>
+                        <textarea class="quote-btn registration-input" id="story" name="story" rows="1" cols="10" placeholder="Get a quote"></textarea>
+                        <div class="procceed">
+                            <h4 class="total-title">sub total <span>$900</span></h4>
+                            <h3 class="total-subtitle">grand total <span>$900</span></h3>
+                            <div class="procceed-line"></div>
+                            <button class="procceed-btn join-btn" type="submit"><span class="procceed-txt">Procceed to checkout</span></button>
+                        </div>
                     </div>
-                    <div class="registration-input"><input class="input" type="text" placeholder="Bangladesh"></div>
-                    <div class="registration-input"> <input class="input" type="text" placeholder="State"></div>
-                    <div class="registration-input"><input class="input" type="text" placeholder="Post code / Zip"></div>
-                    <textarea class="quote-btn registration-input" id="story" name="story" rows="1" cols="10" placeholder="Get a quote"></textarea>
-                    <div class="procceed">
-                        <h4 class="total-title">sub total <span>$900</span></h4>
-                        <h3 class="total-subtitle">grand total <span>$900</span></h3>
-                        <button class="join-btn" type="submit">Procceed to checkout</button>
-                    </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </section>
         <section class="subscribe">
             <div class="subscribe-wrp">
